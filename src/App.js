@@ -17,7 +17,7 @@ class App extends Component {
 
   // Toggles the state of `isCompleted` whenever a todo is checked or unchecked in the app
   toggleComplete(index) {
-    const todos = this.state.todos.slice();
+    const todos = [...this.state.todos];
     const todo = todos[index];
     todo.isCompleted = todo.isCompleted ? false : true;
     this.setState({ todos: todos });
